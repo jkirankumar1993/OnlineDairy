@@ -1,0 +1,9 @@
+<div ng-init="init()">
+  <p>Please Pick a date: </p>
+  <input type="date" ng-model="date" name="date" min="2000-01-02"><br><br>
+  <input type="submit" class="btn btn-lg btn-success" ng-click="search()"><br><br>
+  <div ng-show="show_memory_panel">
+    <textarea name="memory" ng-model="memory"></textarea><br><br>
+      <input type="submit" class="btn btn-lg btn-success" ng-click="save()" value="Save">
+  </div>
+</div>

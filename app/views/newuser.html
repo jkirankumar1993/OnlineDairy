@@ -1,0 +1,21 @@
+<form name="userForm" novalidate ng-init="init()">
+  <!-- USERNAME -->
+         <div class="form-group">
+             <label>Username</label>
+             <input type="text" name="username" class="form-control" ng-model="user.username" ng-minlength="3" ng-maxlength="8" ng-required="true">
+             <span>
+                   <p ng-show="userForm.username.$invalid && userForm.username.$dirty">Invalid username. Must be Between 3-8 letters</p>
+             </span>
+         </div>
+
+         <!-- Password -->
+         <div class="form-group">
+             <label>Password</label>
+             <input type="password" name="password" class="form-control" ng-model="user.password" ng-required="true" ng-minlength="3" ng-maxlength="8">
+             <span>
+                   <p ng-show="userForm.password.$invalid && userForm.password.$dirty">Invalid Password. Must be Between 3-8 letters</p>
+             </span>
+         </div>
+
+         <button type="button" class="btn btn-primary" ng-click="login()" ng-disabled="userForm.$invalid">Register</button>
+</form>
